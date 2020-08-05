@@ -1,7 +1,7 @@
 .wrap {
   max-width: 1530px;
   margin: 0px auto;
-  padding: 0px 15px;
+  padding: 0px 10px;
 }
 
 .logo {
@@ -269,16 +269,109 @@
   background: url(../../img/mainBanner-bg.png);
   background-size: cover;
 }
+.mainBanner .slick-dots {
+  position: absolute;
+  top: 0;
+}
+.mainBanner .slick-dots li button {
+  border: none;
+  background: none;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px auto;
+  color: #ffffff;
+  transition: 0.3s ease-in;
+}
+.mainBanner .slick-dots li button::before, .mainBanner .slick-dots li button:after {
+  transition: 0.3s;
+  display: block;
+  content: "";
+  height: 20px;
+  margin: -1px 0;
+  width: 2px;
+  background: #fff;
+}
+.mainBanner .slick-dots .slick-active button {
+  font-size: 39px;
+  line-height: 39px;
+  color: #000000;
+}
+.mainBanner .slick-dots .slick-active button::before, .mainBanner .slick-dots .slick-active button::after {
+  height: 92px;
+}
+.mainBanner .slick-dots li:first-child button::before {
+  display: none;
+}
+.mainBanner .slick-dots li:first-child button::after {
+  margin-top: 5px;
+}
+.mainBanner .slick-dots li.slick-active:nth-child(2) button::before, .mainBanner .slick-dots li.slick-active:nth-child(2) button::after {
+  height: 56px;
+}
+.mainBanner .slick-dots li:nth-child(2) button::before {
+  margin-bottom: 5px;
+}
+.mainBanner .slick-dots li:nth-child(2) button::after {
+  margin-top: 5px;
+}
+.mainBanner .slick-dots li:last-child button::after {
+  display: none;
+}
+.mainBanner .slick-dots li:last-child button::before {
+  margin-bottom: 5px;
+}
 .mainBanner__wrap {
   padding: 260px 20px;
 }
 .mainBanner__slider {
+  position: relative;
+  max-width: 750px;
   padding: 65px 0;
+  font-family: "Montserrat";
+  font-weight: bold;
 }
 .mainBanner__slider-bg {
+  position: absolute;
   background: #e6e6e6;
   height: 100%;
-  width: 100%;
+  width: 200%;
+  right: 0;
+  top: 0;
+}
+.mainBanner__slider-body {
+  overflow: hidden;
+}
+.mainBanner__slider-wrap {
+  position: relative;
+  display: flex;
+  z-index: 2;
+  min-height: 275px;
+}
+.mainBanner__slider-dots {
+  margin-right: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 255px;
+  min-width: 34px;
+  position: relative;
+}
+.mainBanner__heading {
+  font-size: 46px;
+  margin-bottom: 20px;
+}
+.mainBanner__subheading {
+  text-transform: uppercase;
+  font-family: "Graphik";
+}
+.mainBanner__button {
+  background: #ffffff;
+  margin-top: 40px;
 }
 
 .catalog {

@@ -106,6 +106,10 @@
     justify-content: space-around;
   }
 
+  .mainBanner__heading {
+    font-size: 38px;
+  }
+
   .header-menu__item {
     font-size: 14px;
   }
@@ -141,6 +145,49 @@
   .header-menu__list--open {
     display: flex !important;
     height: 200px !important;
+  }
+
+  .mainBanner__heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .mainBanner__subheading {
+    font-size: 11px;
+  }
+  .mainBanner__slider {
+    max-width: 350px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .mainBanner__slider-wrap {
+    flex-direction: column-reverse;
+  }
+  .mainBanner__slider-bg {
+    width: 100%;
+  }
+  .mainBanner__slider-item {
+    padding: 0px 15px;
+  }
+  .mainBanner__slider-dots {
+    flex-direction: row;
+    width: 100%;
+    min-height: 30px;
+    margin: 0;
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+  .mainBanner__slider .slick-dots {
+    display: flex;
+    width: 100%;
+    min-height: 30px;
+  }
+  .mainBanner__slider .slick-dots li button {
+    font-size: 39px;
+    line-height: 39px;
+    flex-direction: row;
+  }
+  .mainBanner__slider .slick-dots li button::before, .mainBanner__slider .slick-dots li button::after {
+    display: none;
   }
 
   .wrap {

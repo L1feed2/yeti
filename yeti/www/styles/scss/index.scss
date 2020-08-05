@@ -6,9 +6,9 @@ $grey: #333232;
 .wrap {
     max-width: 1530px;
     margin: 0px auto;
-    padding: 0px 15px;
-
+    padding: 0px 10px;
 }
+
 
 
 .logo {
@@ -324,17 +324,145 @@ $grey: #333232;
 .mainBanner{
     background: url(../../img/mainBanner-bg.png);
     background-size: cover;
+
+    .slick-dots{
+        position: absolute;
+        top: 0;
+        li{
+            button{
+                // background: url(path/to/your-image.png);
+                border: none;
+                background: none;
+                font-weight: bold;
+                font-size: 18px;
+                text-align: center;
+                display: block;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0px auto;
+                color: #ffffff;
+                // transition: color 0.3s;
+                transition: 0.3s ease-in;
+                &::before, &:after{
+                    transition: 0.3s;
+                    display: block;
+                    content: '';
+                    height: 20px;
+                    margin: -1px 0;
+                    width: 2px;
+                    background: #fff;
+                }
+            }
+        }
+
+        .slick-active{
+            button{
+                font-size: 39px;
+                line-height: 39px;
+                color: #000000;
+                &::before, &::after{
+                    height: 92px;
+                }
+            }
+        }
+
+        li:first-child{
+            button{
+                &::before{
+                    display: none;
+                }
+                &::after{
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        li.slick-active:nth-child(2){
+            button{
+                &::before, &::after{
+                    height: 56px;
+                }
+            }
+        }
+
+        li:nth-child(2){
+            button{
+                &::before{
+                    margin-bottom: 5px;
+                }
+
+                &::after{
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        li:last-child{
+            button{
+                &::after{
+                    display: none;
+                }
+
+                &::before{
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
     &__wrap{
         padding: 260px 20px;
     }
 
     &__slider{
+        position: relative;
+        max-width: 750px;
         padding: 65px 0;
+        font-family: 'Montserrat';
+        font-weight: bold;
         &-bg{
+            position: absolute;
             background: #e6e6e6;
             height: 100%;
-            width: 100%;
+            width: 200%;
+            right: 0;
+            top: 0;
         }
+
+        &-body{
+            overflow: hidden;
+        }
+        &-wrap{
+            position: relative;
+            display: flex;
+            z-index: 2;
+            min-height: 275px;
+        }
+        &-dots{
+            margin-right: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 255px;
+            min-width: 34px;
+            position: relative;
+        }
+    }
+
+    &__heading{
+        font-size: 46px;
+        margin-bottom: 20px;
+    }
+
+    &__subheading{
+        text-transform: uppercase;
+        font-family: 'Graphik';
+    }
+
+    &__button{
+        background: #ffffff;
+        margin-top: 40px;
     }
 }
 
